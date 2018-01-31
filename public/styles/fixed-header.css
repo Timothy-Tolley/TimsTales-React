@@ -1,0 +1,43 @@
+/* header */
+.fixedHead{
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  position: fixed;
+  width: 100%;
+  background-color: white;
+  justify-content: space-around;
+  z-index: 1;
+}
+
+#title{
+  display: flex;
+  justify-content: center;
+  background-color: white;
+}
+
+.navBar{
+  display: flex;
+  flex-direction: row;
+  height: 40px;
+  width: 100%;
+  margin-left: 20px;
+  margin-right: 20px;
+  background-color: white;
+}
+
+.nav{
+  margin-right: 5px;
+  margin-left: 5px;
+  flex:1;
+  text-align: center;
+  background-color: white;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  align-self: center;
+}
+
+.nav:hover{
+  color:white;
+  background-color: lightgray;
+}
