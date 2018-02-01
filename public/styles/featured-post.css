@@ -1,0 +1,23 @@
+/* featured  */
+.featuredPostCont{
+  max-width: 80%;
+  padding-top:72px;
+  display: flex; 
+  flex-direction: column;
+  margin: 2px;
+  align-self: center;
+}
+
+.featuredImage{
+  max-width: 100%;
+}
+
+.featuredTitle{
+  margin: 2px;
+ 
+}
+
+.featuredBlurb{
+  margin:2px; 
+  font-size: 12px;
+}

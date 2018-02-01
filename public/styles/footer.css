@@ -1,0 +1,21 @@
+/* footer */
+.footer{
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.foot{
+  color: black;
+  flex: 1;
+  text-align: center;
+  font-size: 10px;
+  padding:5px;
+}
+
+.footerLink{
+  text-decoration: none;
+}

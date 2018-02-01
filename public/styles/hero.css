@@ -1,0 +1,45 @@
+/* Hero Page */
+
+.heroContainer{
+  background: url("/images/rice-paddies.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.heroText{
+  text-align: center;
+  align-self: center;
+  color:white;
+}
+
+.heroButton{
+  position: relative;
+  background-color: transparent;
+  width:auto;
+  align-self: center;
+  border: 2px solid white;
+  color: white;
+  border-radius: 3px;
+  font-size: 15px;
+  font-family: 'Playfair Display', serif;
+}
+
+.heroButCont{
+  position: relative;
+  align-self: center;
+}
+
+.heroButton:hover {
+  background-color: black;
+  color: white;
+}
+

@@ -1,9 +1,9 @@
 import React from 'react'
 
-const FixedHeader  = () => {
+const FixedHeader = () => {
   return (
     <div className = 'fixedHead'>
-      <h1 id='title'> TIM'S TRAVEL TALES</h1>
+      <h1 id='headerTitle'> TIM'S TRAVEL TALES </h1>
       <div className = 'navBar' >
         <div className = 'nav'> CITY GUIDES </div>
         <div className = 'nav'> EXPERIENCES </div>
