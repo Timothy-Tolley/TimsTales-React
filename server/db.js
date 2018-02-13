@@ -1,34 +1,14 @@
 const MongoClient = require('mongodb').MongoClient
-const assert = require('assert')
 
-MongoClient.connect('mongodb://localhost:27017/timstales', (err, db) => {
-  if (err) console.error(err)
-  console.log(db)
-  var collection = db.collection('posts')
+const uri = 'mongodb://timstales:ideology1@ds233208.mlab.com:33208/timstales'
+
+MongoClient.connect(uri, (err, client) => {
+  if (err) alert('error:', err.message)
+
+  const collection = client.db('timstales').collection('posts')
   collection.find({}).toArray((err, items) => {
-    if (err) console.error(err)
-    console.log(items)
-    db.close()
+    if (err) alert('error:', err.message)
+    return items
   })
+  client.close()
 })
-
-// ;(async function findPost (id) {
-//   let client
-
-//   try {
-//     client = await MongoClient.connect(url)
-//     console.log('connection correctly to server')
-//     const db = client.db(dbName)
-
-//     const col = db.collection('posts')
-
-//     let doc = await col.find({_id: id}).toArray()[0]
-//     console.log(doc)
-
-//     return doc
-//   }
-//   catch (err) {
-//     console.log(err.stack)
-//   }
-//   client.close()
-// })()
