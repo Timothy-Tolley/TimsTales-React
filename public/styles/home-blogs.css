@@ -1,0 +1,45 @@
+ /* posts */
+.posts{
+    justify-content: space-between;
+    display: flex;
+    align-self: center;
+    max-width: 80%;
+    margin: 2px;
+    padding: 10px;
+    flex-wrap: wrap;
+}
+
+.post{
+  padding: 3px;
+  display: flex;
+  flex-direction: column;
+  text-overflow: ellipsis;
+  width:33%;
+}
+
+.imageCont{
+  width: 100%;
+  padding-top:100%;
+  
+}
+
+.postImage{
+  width:300px;
+  object-fit: cover;
+}
+
+.blurb{
+  font-size: 0.75rem;
+  padding:2px;
+  margin-bottom: 5px;
+}
+
+.postTitle{
+  font-size: 1rem;
+  padding:2px;
+} 
+
+.postLink{
+  text-decoration: none;
+  color:black;
+}

@@ -6,18 +6,21 @@
   flex-direction: column;
   margin: 2px;
   align-self: center;
+  text-decoration: none;
+  color: black;
 }
 
 .featuredImage{
   max-width: 100%;
+  align-self: center;
 }
 
 .featuredTitle{
   margin: 2px;
- 
+  font-size: 1.5rem;
 }
 
 .featuredBlurb{
   margin:2px; 
-  font-size: 12px;
+  font-size: 1rem;
 }

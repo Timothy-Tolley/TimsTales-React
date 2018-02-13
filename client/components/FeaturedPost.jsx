@@ -1,19 +1,22 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
-const FeaturedPost = () => {
+const FeaturedPost = (props) => {
   return (
-    <div className = 'featuredPostCont'>
+    <Link to={`/post/${props.featuredPost[0].id}`}
+      className="featuredPostCont"
+      key={props.featuredPost[0].id}>
       <img
-        src='http://res.cloudinary.com/timstales/image/upload/v1517439287/timstales-blogposts/le-pirate-bali.jpg'
-        alt = 'featuredPost'
+        src={props.featuredPost[0].img_prim}
+        alt = {props.featuredPost[0].title}
         className = "featuredImage"/>
       <h3 className = "featuredTitle">
-        Le Pirate - Bali
+        {props.featuredPost[0].title}
       </h3>
       <p className = "featuredBlurb">
-        Chill Vibes and Endless Summer
+        {props.featuredPost[0].blurb}
       </p>
-    </div>
+    </Link>
   )
 }
 

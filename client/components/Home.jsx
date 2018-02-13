@@ -1,7 +1,11 @@
 import React from 'react'
 import FixedHeader from './FixedHeader'
 import FeaturedPost from './FeaturedPost'
+import HomeBlogs from './HomeBlogs'
 import Footer from './Footer'
+
+import posts from '../../data/posts'
+import featuredPost from '../../data/featuredPost'
 
 class Home extends React.Component {
   render () {
@@ -9,7 +13,10 @@ class Home extends React.Component {
       <div className='homePageContainer'>
         <FixedHeader/>
         <div className='homeBody'>
-          <FeaturedPost/>
+          <FeaturedPost featuredPost = {featuredPost}/>
+          <div className = 'posts'>
+            <HomeBlogs posts={posts}/>
+          </div>
           <Footer/>
         </div>
       </div>

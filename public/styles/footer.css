@@ -6,16 +6,18 @@
   right: 0;
   bottom: 0;
   left: 0;
+  padding:10px;
 }
 
 .foot{
   color: black;
   flex: 1;
   text-align: center;
-  font-size: 10px;
+  font-size: 0.75rem;
   padding:5px;
 }
 
 .footerLink{
   text-decoration: none;
+  color:black;
 }

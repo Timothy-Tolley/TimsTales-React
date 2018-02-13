@@ -1,13 +1,13 @@
 /* Hero Page */
 
 .heroContainer{
-  background: url("/images/rice-paddies.jpg");
+  background: url('http://res.cloudinary.com/timstales/image/upload/v1517438920/timstales-blogposts/rice-paddies.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   top: 0px;
   left: 0px;
   display: flex;
-  position: absolute;
+  position: absolute; 
   flex-direction: column;
   justify-content: center;
   align-content: center;
@@ -19,6 +19,7 @@
   text-align: center;
   align-self: center;
   color:white;
+  font-size: 3rem;
 }
 
 .heroButton{
@@ -29,8 +30,9 @@
   border: 2px solid white;
   color: white;
   border-radius: 3px;
-  font-size: 15px;
+  font-size: 2.5rem;
   font-family: 'Playfair Display', serif;
+  padding:4px;
 }
 
 .heroButCont{

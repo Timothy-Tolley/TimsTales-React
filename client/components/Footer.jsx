@@ -3,20 +3,15 @@ import {Link} from 'react-router-dom'
 
 const Footer = () => {
   return (
-    <div>
+    <div className="footer">
       <p className = 'foot'>
-        <Link to='/home'>
+        <Link to='/home' className="footerLink">
           HOME
         </Link>
       </p>
       <p className = 'foot'>
-        <Link to='/contact'>
-          CONTACT
-        </Link>
-      </p>
-      <p className = 'foot'>
-        <Link to='/about'>
-          ABOUT
+        <Link to='/about-contact' className="footerLink">
+          ABOUT/ CONTACT
         </Link>
       </p>
       <div className = 'socialLinks foot'>
@@ -28,6 +23,11 @@ const Footer = () => {
         <p>
           <a href='https://www.linkedin.com/in/timothy-tolley/' className = "footerLink">
             LINKEDIN
+          </a>
+        </p>
+        <p>
+          <a href='https://www.pinterest.nz/tt0l/' className = "footerLink">
+            PINTEREST
           </a>
         </p>
       </div>
