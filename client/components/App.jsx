@@ -6,6 +6,7 @@ import Hero from './Hero'
 import AboutContact from './AboutContact'
 import Post from './Post'
 import User from './User'
+import Login from './Login'
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
         <Route path='/about-contact' component={AboutContact}/>
         <Route path='/post/:id' component={Post}/>
         <Route exact path ='/user' component={User}/>
+        <Route exact path ='/login' component={Login}/>
       </div>
     </Router>
   )

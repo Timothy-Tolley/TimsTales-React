@@ -5,7 +5,7 @@ import {Image, Transformation} from 'cloudinary-react'
 
 const post = (props) => {
   return (
-    <div className = 'page'>
+    <div className = 'postPage'>
       <FixedHeader />
       <div className ='postContainer'>
         <Image cloudName="timstales" publicId="timstales-blogposts/Greece2.jpg"
@@ -13,7 +13,7 @@ const post = (props) => {
           <Transformation crop="scale"/>
         </Image>
         <h1 className='postHeader'>Post Title</h1>
-        <p className='postcontent'>Post Content</p>
+        <p className='postContent'> Post Content Post Content Post Content Post Content Post Content Post Content Post Content Post Content Post Content Post Content Post Content Post Content Post Content Post Content Post Content Post Content Post Content Post Content Post Content Post Content Post Content Post Content Post Content Post Content Post Content Post Content Post Content Post Content Post Content Post Content Post Content Post Content Post Content Post Content Post Content Post Content Post Content Post Content Post Content Post Content Post Content Post Content Post Content Post Content Post ContentPost Content</p>
       </div>
       <Footer />
     </div>

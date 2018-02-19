@@ -2,6 +2,7 @@
 .posts{
     justify-content: space-between;
     display: flex;
+    flex-direction: row;
     align-self: center;
     max-width: 80%;
     margin: 2px;
@@ -14,13 +15,17 @@
   display: flex;
   flex-direction: column;
   text-overflow: ellipsis;
-  width:33%;
+  width:100%;
+}
+
+.postCont{
+  text-decoration: none;
+  color:black;
+  width: 300px;
 }
 
 .imageCont{
   width: 100%;
-  padding-top:100%;
-  
 }
 
 .postImage{
@@ -39,7 +44,3 @@
   padding:2px;
 } 
 
-.postLink{
-  text-decoration: none;
-  color:black;
-}

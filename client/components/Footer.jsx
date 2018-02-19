@@ -31,6 +31,11 @@ const Footer = () => {
           </a>
         </p>
       </div>
+      <p className = 'foot'>
+        <Link to='/user' className="footerLink">
+          USER
+        </Link>
+      </p>
     </div>
   )
 }
