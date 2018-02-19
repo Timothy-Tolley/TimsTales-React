@@ -1,6 +1,7 @@
 import React from 'react'
 
 import {login as loginAPI} from '../utils/api'
+import { removeUser } from '../utils/auth'
 
 class Login extends React.Component {
   constructor () {
@@ -39,6 +40,8 @@ class Login extends React.Component {
           placeholder='Password'
           onChange={this.handleChange} /></p>
         <button onClick={this.handleClick}>Login</button>
+        <br/>
+        <button onClick={removeUser}>Logout</button>
       </div>
     )
   }
