@@ -15,7 +15,7 @@ router.get('/posts', (req, res) => {
     })
 })
 
-router.get('posts/:id', (req, res) => {
+router.get('/posts/:id', (req, res) => {
   db.getMongoPost(req.params.id)
     .then(post => res.json({post}))
     .catch(err => {

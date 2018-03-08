@@ -1,17 +1,29 @@
 import React from 'react'
 
-import {login as loginAPI} from '../utils/api'
+import User from './User'
 import { removeUser } from '../utils/auth'
+import {login as loginAPI} from '../utils/api'
 
 class Login extends React.Component {
   constructor () {
     super()
     this.state = {
       username: '',
-      password: ''
+      password: '',
+      showUser: false
     }
     this.handleChange = this.handleChange.bind(this)
     this.handleClick = this.handleClick.bind(this)
+  }
+
+  componentDidMount () {
+    if (window.localStorage.getItem('token')) {
+      this.setState({
+        showUser: true
+      })
+    } else {
+      console.log('not logged in!')
+    }
   }
 
   handleChange (e) {
@@ -28,6 +40,9 @@ class Login extends React.Component {
       password: password.trim()
     }
     loginAPI('post', '/api/v1/signin', creds)
+      .then(() => this.setState({
+        showUser: true
+      }))
   }
 
   render () {
@@ -42,6 +57,7 @@ class Login extends React.Component {
         <button onClick={this.handleClick}>Login</button>
         <br/>
         <button onClick={removeUser}>Logout</button>
+        {this.state.showUser && <User/>}
       </div>
     )
   }

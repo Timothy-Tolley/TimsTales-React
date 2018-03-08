@@ -1,6 +1,7 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
 import request from 'superagent'
+import {Link} from 'react-router-dom'
+import {Image, Transformation} from 'cloudinary-react'
 
 class Post extends React.Component {
   constructor (props) {
@@ -11,20 +12,23 @@ class Post extends React.Component {
   }
   componentDidMount () {
     request.get('api/v1/posts')
-      .then(res => console.log(res))
-    // this.setState({
-    //   posts: res.body
-    // }))
+      .then(res => {
+        this.setState({
+          posts: res.body.posts
+        })
+      })
   }
   render () {
     return (
-      this.props.posts.map(post => {
+      this.state.posts.map(post => {
         return (
           <Link to={`/post/${post.id}`} className="postCont" key={post.id}>
             <div className='post'>
               <div className='imageCont'>
-                <img
-                  className = 'postImage' src={post.img_prim}/>
+                <Image cloudName="timstales" publicId={post.img_prim}
+                  className="postImage">
+                  <Transformation crop="scale"/>
+                </Image>
               </div>
               <h3 className = "postTitle">{post.title}</h3>
               <p className = "blurb">{post.blurb}</p>

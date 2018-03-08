@@ -32,8 +32,8 @@ const Footer = () => {
         </p>
       </div>
       <p className = 'foot'>
-        <Link to='/user' className="footerLink">
-          USER
+        <Link to='/login' className="footerLink">
+          LOGIN
         </Link>
       </p>
     </div>

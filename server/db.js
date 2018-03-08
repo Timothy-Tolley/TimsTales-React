@@ -44,7 +44,7 @@ module.exports = {
     MongoClient.connect(uri, (err, client) => {
       if (err) alert('error:', err.message)
       const collection = client.db('timstales').collection('posts')
-      collection.find({id: id}).toArray((err, post) => {
+      collection.find({'id': id}).toArray((err, post) => {
         if (err) alert('error:', err.message)
         return post
       })
