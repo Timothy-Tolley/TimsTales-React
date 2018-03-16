@@ -1,7 +1,7 @@
 import React from 'react'
 
 import User from './User'
-import { removeUser } from '../utils/auth'
+import {removeUser} from '../utils/auth'
 import {login as loginAPI} from '../utils/api'
 
 class Login extends React.Component {
@@ -21,8 +21,6 @@ class Login extends React.Component {
       this.setState({
         showUser: true
       })
-    } else {
-      console.log('not logged in!')
     }
   }
 

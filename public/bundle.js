@@ -51040,8 +51040,6 @@ var Login = function (_React$Component) {
         this.setState({
           showUser: true
         });
-      } else {
-        console.log('not logged in!');
       }
     }
   }, {
