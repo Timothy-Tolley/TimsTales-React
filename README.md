@@ -16,3 +16,5 @@ run yarn
 run yarn dev 
 
 go to localhost:3000
+
+feel free to add issues if youre interested 
