@@ -10,11 +10,8 @@ Uses React, Redux, MongoDB, Node and Express
 Usage: 
 
 Pull down the repo
-
 run yarn 
-
 run yarn dev 
-
 go to localhost:3000
 
 feel free to add issues if youre interested!
