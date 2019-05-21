@@ -3277,18 +3277,20 @@ moment@2.x.x:
   version "2.20.1"
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.20.1.tgz#d6eb1a46cbcc14a2b2f9434112c1ff8907f313fd"
 
-mongodb-core@3.0.2:
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/mongodb-core/-/mongodb-core-3.0.2.tgz#914896092dd45427d9a4f98a7997a0bfb81d163b"
+mongodb-core@3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/mongodb-core/-/mongodb-core-3.1.0.tgz#af91f36fd560ed785f4e61e694432df4d3698aad"
   dependencies:
     bson "~1.0.4"
     require_optional "^1.0.1"
+  optionalDependencies:
+    saslprep "^1.0.0"
 
-mongodb@^3.0.2:
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/mongodb/-/mongodb-3.0.2.tgz#28172302ed4e9388d8091e2cc4618057e6f5debc"
+mongodb@^3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/mongodb/-/mongodb-3.1.1.tgz#c018c4b277614e8b1e08426d5bcbe1a7e5cdbd74"
   dependencies:
-    mongodb-core "3.0.2"
+    mongodb-core "3.1.0"
 
 ms@2.0.0:
   version "2.0.0"
@@ -4215,6 +4217,10 @@ ripemd160@^2.0.0, ripemd160@^2.0.1:
 safe-buffer@5.1.1, safe-buffer@^5.0.1, safe-buffer@^5.1.0, safe-buffer@^5.1.1, safe-buffer@~5.1.0, safe-buffer@~5.1.1:
   version "5.1.1"
   resolved "https://registry.yarnpkg.com/safe-buffer/-/safe-buffer-5.1.1.tgz#893312af69b2123def71f57889001671eeb2c853"
+
+saslprep@^1.0.0:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/saslprep/-/saslprep-1.0.1.tgz#b644e0ba25b156b652f3cb90df7542f896049ba6"
 
 select-hose@^2.0.0:
   version "2.0.0"

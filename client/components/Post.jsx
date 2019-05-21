@@ -1,5 +1,6 @@
 import React from 'react'
 import request from 'superagent'
+import bodyParser from 'body-parser'
 
 import Footer from './Footer'
 import FixedHeader from './FixedHeader'
@@ -9,7 +10,8 @@ class post extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      post: {}
+      post: {},
+      err:''
     }
   }
 
@@ -19,6 +21,12 @@ class post extends React.Component {
       .then(res => {
         this.setState({
           post: res.body
+        })
+      })
+      .catch(err => {
+        this.setState({
+          post:{},
+          err: err
         })
       })
   }

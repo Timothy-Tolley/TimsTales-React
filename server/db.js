@@ -2,14 +2,14 @@ const MongoClient = require('mongodb').MongoClient
 
 const uri = 'mongodb://timstales:ideology1@ds233208.mlab.com:33208/timstales'
 
-MongoClient.connect(uri)
+MongoClient.connect(uri, {useNewUrlParser: true})
   .then(client => {
     const db = client.db('timstales')
     return db.collection('posts')
       .find({}).toArray()
       .then(output => output)
       .then((output) => {
-        db.close()
+        client.close()
         return output
       })
   })
@@ -38,10 +38,12 @@ module.exports = {
             client.close()
             return output
           })
+          .catch(err => console.error("error:", err))
       })
   },
   getMongoPost: (id) => {
-    MongoClient.connect(uri, (err, client) => {
+    return MongoClient.connect(uri)
+      .then((err, client) => {
       if (err) alert('error:', err.message)
       const collection = client.db('timstales').collection('posts')
       collection.find({'id': id}).toArray((err, post) => {
@@ -52,7 +54,8 @@ module.exports = {
     })
   },
   getMongoImages: (id) => {
-    MongoClient.connect(uri, (err, client) => {
+    return MongoClient.connect(uri)
+      .then((err, client) => {
       if (err) alert('error:', err.message)
       const collection = client.db('timstales').collection('images')
       collection.find({}).toArray((err, images) => {
@@ -63,7 +66,8 @@ module.exports = {
     })
   },
   getMongoimage: (id) => {
-    MongoClient.connect(uri, (err, client) => {
+    return MongoClient.connect(uri)
+      .then((err, client) => {
       if (err) alert('error:', err.message)
       const collection = client.db('timstales').collection('images')
       collection.find({id: id}).toArray((err, image) => {
@@ -74,7 +78,8 @@ module.exports = {
     })
   },
   getMongoTags: (id) => {
-    MongoClient.connect(uri, (err, client) => {
+    return MongoClient.connect(uri)
+      .then((err, client) => {
       if (err) alert('error:', err.message)
       const collection = client.db('timstales').collection('tags')
       collection.find({}).toArray((err, tags) => {
@@ -85,7 +90,8 @@ module.exports = {
     })
   },
   getMongoTag: (id) => {
-    MongoClient.connect(uri, (err, client) => {
+    return MongoClient.connect(uri)
+      .then((err, client) => {
       if (err) alert('error:', err.message)
       const collection = client.db('timstales').collection('tags')
       collection.find({id: id}).toArray((err, tag) => {
